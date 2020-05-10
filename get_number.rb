@@ -22,7 +22,7 @@ guesses_it = false
 
 puts "You've got #{10 - num_guesses} guesses left."
 print "Make a guess: "
-guess = gets.to_i\
+guess = gets.to_i
 
 #Сравнение введеного числа с загаданным
 #и вывод соответствующего сообщения.
@@ -33,9 +33,10 @@ elsif guess > target
 elsif guess == target
    puts "Good job, #{name}!"
    puts "You guessed my number in #{num_guesses} guesses!"
-   guesses_it = true
+   guessed_it = true
 end
 
 #Если попыток не осталось, сообщить загаданное число.
-if not guessed_it
+unless guessed_it
    puts "Sorry. You didn't get my number. (It was #{target}."
+end
