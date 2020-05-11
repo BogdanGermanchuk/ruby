@@ -18,11 +18,15 @@ target = rand(100) + 1
 num_guesses = 0
 
 #Признак прохождения игры.
-guesses_it = false
+guessed_it = false
+   
+until num_guesses == 10 || guessed_it
 
 puts "You've got #{10 - num_guesses} guesses left."
 print "Make a guess: "
 guess = gets.to_i
+
+num_guesses += 1
 
 #Сравнение введеного числа с загаданным
 #и вывод соответствующего сообщения.
@@ -34,6 +38,8 @@ elsif guess == target
    puts "Good job, #{name}!"
    puts "You guessed my number in #{num_guesses} guesses!"
    guessed_it = true
+end
+
 end
 
 #Если попыток не осталось, сообщить загаданное число.
