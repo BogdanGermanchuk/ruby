@@ -1,5 +1,5 @@
-File.open("simple.txt", "a") do |file|
-   file.write("VPN-VPN-VPN")
+File.open("index.html", "w") do |file|
+   file.write("<h4>VPN</h4>")
 end
 
 
